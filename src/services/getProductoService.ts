@@ -8,9 +8,9 @@ export async function getProductoById(id: number): Promise<Producto>{
             if(producto){
                 resolve(producto)
             } else {
-                reject(`El país con id ${id} no existe`)
+                reject(`El producto con id ${id} no existe`)
             }
         }, 800);
     })
-    return promesa;
+    return promesa as Promise<Producto>;
 }

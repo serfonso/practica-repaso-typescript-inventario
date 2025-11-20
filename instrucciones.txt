@@ -1,3 +1,5 @@
 Primero creamos la estructura de carpetas.
 A continuacion iniciamos git y creamos la rama con git checkout -b feature/servicio-get-producto-service
-y rellenamos la informacion de los archivos typescript
+y rellenamos la informacion de los archivos typescript.
+Ahora añadimos los archivos a git con git add y git commit y cambiamos de rama igual que antes para simular
+la integracion de otro servicio
