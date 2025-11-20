@@ -1,5 +1,27 @@
-Primero creamos la estructura de carpetas.
-A continuacion iniciamos git y creamos la rama con git checkout -b feature/servicio-get-producto-service
-y rellenamos la informacion de los archivos typescript.
-Ahora añadimos los archivos a git con git add y git commit y cambiamos de rama igual que antes para simular
-la integracion de otro servicio
+Para empezar creamos la estructura que seria tal que asi:
+EJERCICIO1TYPESCRIPT
+|
+|-- public/
+|   |-- dist/
+|   |-- index.html
+|-- src/
+|   |-- data/
+|   |   |-- info.ts
+|   |-- domain/
+|   |   |-- entities/
+|   |       |-- productos.ts
+|   |-- services/
+|   |   |-- getProductosByCategoriaService.ts
+|   |   |-- getProductoService.ts
+|   |-- main.ts
+
+A continuación completamos todo el proyecto a excepción de los servicios, que los vamos a hacer en ramas separadas.
+En este punto, iniciamos git con git init y usamos git checkout -b feature/servicio-get-producto-service para crear la primera rama donde
+se va a encontrar el código con el servicio getProductoService. Una vez está creado el servicio, escribimos en terminal npm init -y, lo 
+que crea package.json y el comando npm install typescript --save-dev para crear package-lock.json, que sirven para la configuración y dependencias
+de node. para terminar, tenemos que crear el archivo tsconfig.json y rellenarlo manualmente, se puede hacer automaticamente pero en clase hemos visto
+que esa es la configuración correcta, y usamos npx tsc para compilar todos los archivos de typescript a javascript en la carpeta dist en public y 
+subimos el proyecto al repositorio utilizando git add ., git commit -m "" y git push -u origin dejando el proyecto en la rama feature/servicio-get-producto-service.
+
+Ahora tenemos que crear la rama feature/servicio-get-producto-categoria-service, lo programamos y repetimos todos los pasos a partir del comando npx tsc, subiendo el
+proyecto a una rama diferente del repositorio quedando bien separados ambos servicios como si fuera una implementación de una feature real.
